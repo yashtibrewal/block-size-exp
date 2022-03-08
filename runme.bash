@@ -20,7 +20,7 @@ getReadSpeed () {
     result=$(sed -n '3p' mem.log)
 }
 
-for i in `seq 2 2 20`
+for i in {2..10}
 do
     power=$((2 ** $i))
     k="k"
@@ -34,4 +34,4 @@ done
 rm mem.log
 rm tstfile
 
-
+go run plot.go
