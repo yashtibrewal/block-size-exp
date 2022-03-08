@@ -20,9 +20,9 @@ getReadSpeed () {
     result=$(sed -n '3p' mem.log)
 }
 
-for i in {2..10}
+for i in {4,8,16,32,64,128,192,256,512}
 do
-    power=$((2 ** $i))
+    power=$(($i))
     k="k"
     block_size="$power$k"
     getWriteSpeed
