@@ -51,7 +51,7 @@ func main() {
 	x_axis, r_y_axis := getXAndYData("reads.txt")
 	bar.SetXAxis(x_axis)
 	bar.AddSeries("Reads", r_y_axis)
-	_, w_y_axis := getXAndYData("reads.txt")
+	_, w_y_axis := getXAndYData("writes.txt")
 	bar.AddSeries("Writes", w_y_axis)
 	figure, _ := os.Create("bar.html")
 	bar.Render(figure)
